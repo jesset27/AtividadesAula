@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Javascript</title>
+</head>
+<body>
+    <h1>–Atividade 02: primo Aula 01</h1>
+    <script>
+        const dado = prompt("Digite um número");
+        parseInt(dado);
+
+        function numerPrimo(n)
+        {
+            if (n <= 1){
+                return false;
+            }
+            
+            for (let i = 2; i < n; i++)
+            {
+                if (n % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        if (numerPrimo(dado))
+        {
+            alert("O número digitado é primo");
+        }
+    </script>
+</body>
+</html>

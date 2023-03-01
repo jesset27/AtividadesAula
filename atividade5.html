@@ -8,7 +8,10 @@
 </head>
 <body>
     <script>
-        alert(Date());
+        const date = new Date();
+        const semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];;
+        const month = date.toLocaleString('default', { month: 'long' });
+        alert(semana[date.getDay()] + " " + date.getDate() + " de " + month + " de " + date.getFullYear());
     </script>
 </body>
 </html>

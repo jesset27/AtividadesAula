@@ -9,15 +9,20 @@
 <body>
     <h1>–Atividade 01: tipo do dado Aula 01</h1>
     <script>
-        const dado = prompt("Insira seu dado");
+        let dado = prompt("Insira seu dado");
         if (confirm("Deseja verificar seu dado? "))
         {
-            if (typeof dado === 'number')
-                alert("Você digitou um number");
-            else if (typeof dado === 'string')
-                alert("Você digitou uma string");
-            else if (typeof dado === 'boolean')
-                alert("Você digitou um valor booleano");
+            if(!isNaN(dado)){
+                dado = parent(dado);
+                document.write(typeof(dado));
+            }
+            else if (dado == 'true' || dado == 'false'){
+                dado = true;
+                document.write(typeof(dado));
+            }
+            else{
+                document.write(typeof(dado));
+            }
         }else {
             alert("Obrigado por visitar essa página");
         }
